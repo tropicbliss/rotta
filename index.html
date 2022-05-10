@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/0ed7c7b62c.js" crossorigin="anonymous"></script>
+  <script src="webcmd.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+  <meta name="description" content="cmd" />
+  <meta property="og:title" content="Rotta" />
+  <meta property="og:description" content="cmd" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rotta.tropicbliss.net" />
+  <link rel="stylesheet" href="dist/output.css">
+  <title>Rotta</title>
+</head>
+
+<body class="dark:bg-slate-900">
+  <div class="mt-12 flex justify-center">
+    <div class="container">
+      <div>
+        <i class="fa-brands fa-searchengin block text-center text-6xl text-indigo-500"></i>
+        <h2 class="text-center mt-6 text-3xl font-extrabold text-slate-900 dark:text-white">Rotta</h2>
+      </div>
+      <form class="mt-8 mb-6 flex justify-center" onsubmit="return runcmd(this.line.value);">
+        <input
+          class="rounded-md border border-gray-300 px-3 py-2 w-full mx-9 md:mx-0 md:w-1/2 text-gray-900 dark:text-white dark:bg-slate-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          id="line" type="text" name="cmd">
+      </form>
+    </div>
+  </div>
+  <div class="container mt-6 px-3">
+    <div class="flex flex-col w-auto space-y-3">
+      <table class="mx-auto table-auto">
+        <tr>
+          <td colspan="2" class="dark:text-white text-xl text-center">Searches</td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            y
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">YouTube
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            t
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Twitch
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            a
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Amazon
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            g
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Google
+            Search
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            gi
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Google
+            Image
+            Search
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            rr
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">CSAIL
+            Reading Room
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            w
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Wikipedia
+          </td>
+        </tr>
+      </table>
+      <table class="mx-auto table-auto">
+        <tr>
+          <td colspan="2" class="dark:text-white text-xl text-center">Shortcuts</td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            bb
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">
+            http://boingboing.net/
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            c
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Google
+            Calendar
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            m
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Gmail
+          </td>
+        </tr>
+        <tr>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4 font-bold">
+            r
+          </td>
+          <td class="dark:bg-slate-900 dark:text-white border border-slate-900 dark:border-white px-8 py-4">Reddit
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+
+</html>
