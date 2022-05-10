@@ -5,17 +5,17 @@
 var shortcuts = {
     "m": "https://mail.google.com/",
     "c": "https://www.google.com/calendar",
-    "r": "http://reddit.com/",
-    "bb": "http://boingboing.net/"
+    "r": "https://reddit.com/",
+    "bb": "https://boingboing.net/"
 }
 
 var searches = {
-    "a": ["http://www.amazon.com/s", "field-keywords",
+    "a": ["https://www.amazon.com/s", "field-keywords",
         { "url": "search-alias=aps" }],
-    "g": ["http://www.google.com/search", "q"],
-    "gi": ["http://www.google.com/images", "q"],
-    "w": ["http://en.wikipedia.org/wiki/Special:Search", "search"],
-    "rr": ["http://reading-room.csail.mit.edu/cgi-bin/user/search.cgi", "search",
+    "g": ["https://www.google.com/search", "q"],
+    "gi": ["https://www.google.com/images", "q"],
+    "w": ["https://en.wikipedia.org/wiki/Special:Search", "search"],
+    "rr": ["https://reading-room.csail.mit.edu/cgi-bin/user/search.cgi", "search",
         { "database": "all", "order": "desc", "case": "not" }],
     "y": ["https://www.youtube.com/results", "q"],
     "t": ["https://www.twitch.tv/search", "term"]
