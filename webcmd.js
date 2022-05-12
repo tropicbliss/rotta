@@ -2,6 +2,12 @@
 // Russ Cox <rsc@swtch.com>, February 2007 
 // IE syntax fixes (no trailing commas), March 2008
 
+const input = document.getElementById("form")
+input.addEventListener("submit", (e) => {
+    e.preventDefault()
+    runcmd(e.target.elements.line.value)
+})
+
 var shortcuts = {
     "m": "https://mail.google.com/",
     "c": "https://www.google.com/calendar",

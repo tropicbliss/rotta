@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/0ed7c7b62c.js" crossorigin="anonymous"></script>
-  <script src="webcmd.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
   <meta name="description" content="cmd" />
   <meta property="og:title" content="Rotta" />
@@ -27,7 +26,7 @@
         <i class="fa-brands fa-searchengin block text-center text-6xl text-indigo-500"></i>
         <h2 class="text-center mt-6 text-3xl font-extrabold text-slate-900 dark:text-white">Rotta</h2>
       </div>
-      <form class="mt-8 mb-6 flex justify-center" onsubmit="return runcmd(this.line.value);">
+      <form class="mt-8 mb-6 flex justify-center" id="form">
         <input
           class="rounded-md border border-gray-300 px-3 py-2 w-full mx-9 md:mx-0 md:w-1/2 text-gray-900 dark:text-white dark:bg-slate-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
           id="line" type="text" name="cmd">
@@ -134,6 +133,7 @@
       </footer>
     </div>
   </div>
+  <script src="webcmd.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
