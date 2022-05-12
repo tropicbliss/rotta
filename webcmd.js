@@ -8,14 +8,14 @@ input.addEventListener("submit", (e) => {
     runcmd(e.target.elements.line.value)
 })
 
-var shortcuts = {
+const shortcuts = {
     "m": "https://mail.google.com/",
     "c": "https://www.google.com/calendar",
     "r": "https://reddit.com/",
     "bb": "https://boingboing.net/"
 }
 
-var searches = {
+const searches = {
     "a": ["https://www.amazon.com/s", "field-keywords",
         { "url": "search-alias=aps" }],
     "g": ["https://www.google.com/search", "q"],
@@ -28,7 +28,7 @@ var searches = {
 }
 
 function runcmd(cmd) {
-    var space = cmd.indexOf(' ');
+    let space = cmd.indexOf(' ');
     if (space == -1 && (cmd.indexOf('/') != -1 || cmd.indexOf('.') != -1)) {
         if (cmd.indexOf('://') == -1)
             cmd = "http://" + cmd;
@@ -43,7 +43,7 @@ function runcmd(cmd) {
         cmd = cmd.substr(0, space);
         args = toarray(arg.split(/\s+/));
     }
-    var fn;
+    let fn;
     if (searches[cmd] != undefined)
         fn = search;
     else if (shortcuts[cmd] != undefined)
@@ -57,21 +57,21 @@ function runcmd(cmd) {
 }
 
 function toarray(args) {
-    var a = new Array();
-    for (var i = 0; i < args.length; i++)
+    let a = new Array();
+    for (let i = 0; i < args.length; i++)
         a[i] = args[i];
     return a;
 }
 
 function cgiurl(base, params) {
-    var url = base + "?";
-    for (var k in params)
+    let url = base + "?";
+    for (let k in params)
         url += k + "=" + escape(params[k]) + "&";
     return url;
 }
 
 function search(cmd, arg, _) {
-    var a = searches[cmd][2];
+    let a = searches[cmd][2];
     if (a == undefined)
         a = {};
     a[searches[cmd][1]] = arg;
