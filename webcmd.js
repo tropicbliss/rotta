@@ -4,8 +4,9 @@
 
 const input = document.getElementById("form")
 input.addEventListener("submit", (e) => {
-    e.preventDefault()
-    runcmd(e.target.elements.line.value)
+    e.preventDefault();
+    const textBox = document.getElementById("line");
+    runcmd(textBox.value)
 })
 
 const shortcuts = {
@@ -13,7 +14,7 @@ const shortcuts = {
     "c": "https://www.google.com/calendar",
     "r": "https://reddit.com/",
     "bb": "https://boingboing.net/"
-}
+};
 
 const searches = {
     "a": ["https://www.amazon.com/s", "field-keywords",
@@ -25,7 +26,7 @@ const searches = {
         { "database": "all", "order": "desc", "case": "not" }],
     "y": ["https://www.youtube.com/results", "q"],
     "t": ["https://www.twitch.tv/search", "term"]
-}
+};
 
 function runcmd(cmd) {
     let space = cmd.indexOf(' ');
