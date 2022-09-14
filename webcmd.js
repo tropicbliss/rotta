@@ -7,6 +7,7 @@ input.addEventListener("submit", (e) => {
   e.preventDefault();
   const textBox = document.getElementById("line");
   runcmd(textBox.value);
+  textBox.value = "";
 });
 
 const shortcuts = {
